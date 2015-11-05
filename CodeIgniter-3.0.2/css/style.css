@@ -1,0 +1,21 @@
+/*#pagelist span { float:left;border:1px solid #e0691a; height:20px; font-weight:bold; line-height:20px; margin:0px 2px; list-style:none;}*/
+/*#pagelist span a,*/
+/*.current { background:#FFB27A; display:block; padding:0px 6px; font-weight:bold;}*/
+
+/*#pagelist span{*/
+    /*text-align: center;*/
+/*}*/
+#page{
+    align-content: center;
+}
+#pagelist
+{
+    align-content: center;
+    border-top:1px solid #dfdfdf; padding-top: 10px; text-align: center; margin-bottom: 10px; font-size: 14px;
+}
+#pagelist span strong{
+    margin: 0 5px 0 0; padding: 3px 6px; border: 1px solid #D1D1D1;
+}
+#pagelist span a{
+    margin: 0 5px 0 0; padding: 3px 6px; border: 1px solid #D1D1D1;
+}
