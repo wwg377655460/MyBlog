@@ -14,6 +14,7 @@ class Blog extends CI_Controller
         parent::__construct();
         $this->load->model('blog_model');
         $this->load->model('tag_model');
+        $this->load->model('comment_model');
         $this->load->library('session');
         $this->load->helper('url_helper');
         $this->load->helper('url');
@@ -171,6 +172,7 @@ class Blog extends CI_Controller
 
         $data['blog'] = $this->blog_model->get_blogs($id);
         $data['blogs_new'] = $this->blog_model->get_blogs_gid(0,9);
+        $data['comments'] = $this->comment_model->get_comments($id);
         $this->load->view('blog/myblog', $data);
     }
 

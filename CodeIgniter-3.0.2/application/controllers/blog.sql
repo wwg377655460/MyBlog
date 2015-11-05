@@ -27,6 +27,14 @@ CREATE TABLE blogs_tag_table(
   FOREIGN KEY (tag_id) REFERENCES tag (id)
 );
 
+CREATE TABLE comments(
+  id INT PRIMARY KEY auto_increment,
+  contents VARCHAR (200) NOT NULL ,
+  date TIME NOT NULL,
+  blog_id INT NOT null,
+  FOREIGN KEY (blog_id) REFERENCES blogs (id)
+);
+
 
 INSERT INTO users VALUES (1,"wer","123");
 

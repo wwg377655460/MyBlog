@@ -60,6 +60,9 @@
             </div>
         </div>
 
+
+
+
         <?php include_once('string.php') ?>
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
@@ -71,9 +74,34 @@
 
             </div>
         </div>
+
+
+    </div>
+
+    <div class="list-group">
+        <a href="<?php echo base_url() ?>index.php/comment/toComment/<?php echo $blog['id']?>" class="list-group-item active">
+            <h4 class="list-group-item-heading">
+                评论
+            </h4>
+        </a>
+        <?php include_once('time.php') ?>
+        <?php foreach($comments as $comment):?>
+        <a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading">
+                <?php echo time_tran($comment['date'])?>
+            </h4>
+            <p class="list-group-item-text">
+                <?php echo $comment['contents']?>
+            </p>
+        </a>
+        <?php endforeach;?>
+
     </div>
     <!--/span-->
 </div>
+
+
+
 <!--/row-->
 
 
